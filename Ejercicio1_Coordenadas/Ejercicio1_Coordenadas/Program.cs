@@ -12,21 +12,21 @@
         Console.Write("ingrese el valor de x1: ");
         x1 = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("ingrese el valor de y1:");
+        Console.Write("ingrese el valor de y1: ");
         y1 = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("ingrese el valor de x2");
+        Console.Write("ingrese el valor de x2: ");
         x2 = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("ingrese el valor de y2");
+        Console.Write("ingrese el valor de y2: ");
         y2 = Convert.ToDouble(Console.ReadLine());
 
         //proceso de calculo de las variables
 
-        double X = (x2 - x1) * (x2 - x1);
-        double Y = (y2 - y1) * (y2 - y1);
+        double x = (x2 - x1) * (x2 - x1);
+        double y = (y2 - y1) * (y2 - y1);
 
-        double suma = X + Y;
+        double suma = x + y;
 
         d = Math.Sqrt(suma);
         Console.Write(d);
