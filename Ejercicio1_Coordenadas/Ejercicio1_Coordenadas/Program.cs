@@ -29,6 +29,7 @@
         double suma = x + y;
 
         d = Math.Sqrt(suma);
-        Console.Write(d);
+
+        Console.Write($"la distancia de los pares ordenados ({x1} , {y1}) y ({x2} , {y2}) es : {d}");
     }
 }
