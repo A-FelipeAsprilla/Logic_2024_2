@@ -5,9 +5,30 @@
         //lea las coordenadas de dos puntos y que muestre la distancia entre los dos puntos
 
         //vamos a declarar las variables en este caso son 5
-        double x1,x2,y1,y2,d;
-        Console.Write("por favor ingrese los valos de x1: ");
-        x1=Convert.ToDouble(Console.ReadLine());//esta es la forma de escribir en la pantalla
+        double x1, x2, y1, y2, d;
 
+        //esta es la forma de escribir en la pantalla
+
+        Console.Write("ingrese el valor de x1: ");
+        x1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("ingrese el valor de y1:");
+        y1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("ingrese el valor de x2");
+        x2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("ingrese el valor de y2");
+        y2 = Convert.ToDouble(Console.ReadLine());
+
+        //proceso de calculo de las variables
+
+        double X = (x2 - x1) * (x2 - x1);
+        double Y = (y2 - y1) * (y2 - y1);
+
+        double suma = X + Y;
+
+        d = Math.Sqrt(suma);
+        Console.Write(d);
     }
 }
