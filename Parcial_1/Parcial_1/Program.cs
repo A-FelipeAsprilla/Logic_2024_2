@@ -14,7 +14,7 @@
 
 
         //declaramos los inputs
-        double sueldoBase, venta1, venta2, venta3;
+        double sueldoBase, venta1, venta2, venta3; 
 
         Console.Write("ingrese el valor del Sueldo Base: ");
         sueldoBase = Convert.ToDouble(Console.ReadLine());
@@ -60,5 +60,13 @@
         Console.WriteLine($"El promedio de las comisiones es {PromedioComisiones}");
 
 
+        if ((venta1 + venta2 + venta3) > 1000000)
+        {
+            Console.WriteLine("El vendedor obtuvo el bono extra ");
+        }
+        else if ((venta1 + venta2 + venta3) < 1000000)
+        {
+            Console.WriteLine("El vendedor no obtuvo el bono extra ");
+        }
     }
 }
