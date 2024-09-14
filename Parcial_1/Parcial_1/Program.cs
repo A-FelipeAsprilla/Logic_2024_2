@@ -70,7 +70,10 @@
         {
             Console.WriteLine("El vendedor no obtuvo el bono extra ");
         }
-
+        
+        Console.Write("");
+        Console.Write("");
+        Console.Write("punto 2");
         //punto 2
 
         //Escriba un programa que pida los coeficientes de una ecuacion de primer grado (ax + b = 0) y muestre la solucion
@@ -81,13 +84,13 @@
 
         double coeA, coeB, x;
 
-        Console.WriteLine("Ingrese el valor del coeficiente A: ");
+        Console.Write("Ingrese el valor del coeficiente A: ");
         coeA = Convert.ToDouble(Console.ReadLine());
 
-        Console.WriteLine("Ingrese el valor del coeficiente B: ");
+        Console.Write("Ingrese el valor del coeficiente B: ");
         coeB = Convert.ToDouble(Console.ReadLine()); 
 
-        Console.WriteLine("ingrese el valor del resultado");
+        Console.Write("ingrese el valor del resultado: ");
         x = Convert.ToDouble(Console.ReadLine());
 
 
@@ -95,15 +98,16 @@
 
         if ((-coeB/coeA) == x)
         {
-            Console.WriteLine("La ecuacion tiene unica solucion ");
+            Console.Write("La ecuacion tiene unica solucion ");
         }
-        else if ((-coeB/coeA) != x)
+        else if (((-coeB/coeA) != x) && (x > 0) )
         {
-            Console.WriteLine("La ecuacion no tiene solucion ");
+            Console.Write("La ecuacion no tiene solucion ");
         }
-        else if ((coeA == 0) && (coeB == 0))
+        else if ((coeA == 0) && (coeB == 0) && (x == 0))
+
         {
-            Console.WriteLine("La ecuacion tiene infinitas soluciones");
+            Console.Write("La ecuacion tiene infinitas soluciones");
         }
     }
 }
