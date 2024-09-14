@@ -2,6 +2,8 @@
 {
     private static void Main(string[] args)
     {
+        //punto1
+
         //Realizar un algoritmo con C# donde se solucione el siguiente problema:
         //un vendedor recibe un sueldo base de $xxxx. Ademas, recibe una comision del 10% sobre el valor total de cada venta que realiza. El vendedor desea saber:
 
@@ -67,6 +69,41 @@
         else if ((venta1 + venta2 + venta3) < 1000000)
         {
             Console.WriteLine("El vendedor no obtuvo el bono extra ");
+        }
+
+        //punto 2
+
+        //Escriba un programa que pida los coeficientes de una ecuacion de primer grado (ax + b = 0) y muestre la solucion
+        //Una ecuacion de primer grado puede no tener solucion, tener una solucion unica, o que todos los numeros sean solucion. La formula de las soluciones es x = -b / a
+
+
+        //declaramos los inputs
+
+        double coeA, coeB, x;
+
+        Console.WriteLine("Ingrese el valor del coeficiente A: ");
+        coeA = Convert.ToDouble(Console.ReadLine());
+
+        Console.WriteLine("Ingrese el valor del coeficiente B: ");
+        coeB = Convert.ToDouble(Console.ReadLine()); 
+
+        Console.WriteLine("ingrese el valor del resultado");
+        x = Convert.ToDouble(Console.ReadLine());
+
+
+        //proceso de calculo
+
+        if ((-coeB/coeA) == x)
+        {
+            Console.WriteLine("La ecuacion tiene unica solucion ");
+        }
+        else if ((-coeB/coeA) != x)
+        {
+            Console.WriteLine("La ecuacion no tiene solucion ");
+        }
+        else if ((coeA == 0) && (coeB == 0))
+        {
+            Console.WriteLine("La ecuacion tiene infinitas soluciones");
         }
     }
 }
