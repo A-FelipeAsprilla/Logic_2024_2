@@ -34,26 +34,31 @@
         double comision2 = 0.10 * venta2;
         double comision3 = 0.10 * venta3;
 
-        double ventastotales = (comision1 + comision2 + comision3);
-        Console.Write($"Las ventas totales son de {ventastotales} ");
+        double comisionestotales = (comision1 + comision2 + comision3);
+        Console.Write($"Las comisiones totales son de {comisionestotales} ");
 
 
-        double ComisionesTotales = (sueldoBase + ventastotales);
-        Console.Write($"El sueldo total es de {ComisionesTotales} ");
+        double sueldoTotal = (sueldoBase + comisionestotales);
+        Console.WriteLine($"El sueldo total es de {sueldoTotal} ");
 
 
         if ((comision1 > comision2) && (comision1 > comision3))
         {
-            Console.Write("la venta1 es la que genero mas comision ");
+            Console.WriteLine("la venta1 es la que genero mas comision ");
         }
         else if ((comision2 > comision1) && (comision2 > comision3))
         {
-            Console.Write("La venta2 es la que genero mas comision ");
+            Console.WriteLine("La venta2 es la que genero mas comision ");
         }
         else if ( (comision3 > comision1) && (comision3 > comision2))
         {
-            Console.Write("la venta3 es la que genero mas comision  ");
+            Console.WriteLine("la venta3 es la que genero mas comision  ");
         }
+
+
+        double PromedioComisiones = comisionestotales / 3;
+        Console.WriteLine($"El promedio de las comisiones es {PromedioComisiones}");
+
 
     }
 }
