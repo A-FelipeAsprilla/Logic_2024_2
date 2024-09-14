@@ -14,13 +14,26 @@
 
 
         //declaramos los inputs
-        double sueldoBase, ventas;
+        double sueldoBase, venta1, venta2, venta3; 
 
         Console.Write("ingrese el valor del Sueldo Base: ");
         sueldoBase = Convert.ToDouble(Console.ReadLine());
 
-        Console.Write("ingrese el valor de las ventas: ");
-        ventas = Convert.ToDouble(Console.ReadLine());
+        Console.Write("ingrese el valor de la ventas1: ");
+        venta1 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("ingrese el valor de la venta2: ");
+        venta2 = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("ingrese el valor de la venta3: ");
+        venta3 = Convert.ToDouble(Console.ReadLine());
+
+        double ventastotales = (venta1 + venta2 + venta3);
+        Console.Write($"Las ventas totales son de {ventastotales} ");
+
+        double SueldoTotal = (sueldoBase + (venta1 + venta2 + venta3));
+        Console.Write($"El sueldo total es de {SueldoTotal} ");
+
 
 
     }
