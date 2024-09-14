@@ -14,7 +14,7 @@
 
 
         //declaramos los inputs
-        double sueldoBase, venta1, venta2, venta3; 
+        double sueldoBase, venta1, venta2, venta3;
 
         Console.Write("ingrese el valor del Sueldo Base: ");
         sueldoBase = Convert.ToDouble(Console.ReadLine());
@@ -28,13 +28,32 @@
         Console.Write("ingrese el valor de la venta3: ");
         venta3 = Convert.ToDouble(Console.ReadLine());
 
-        double ventastotales = (venta1 + venta2 + venta3);
+        //proceso de calculo
+
+        double comision1 = 0.10 * venta1;
+        double comision2 = 0.10 * venta2;
+        double comision3 = 0.10 * venta3;
+
+        double ventastotales = (comision1 + comision2 + comision3);
         Console.Write($"Las ventas totales son de {ventastotales} ");
 
-        double SueldoTotal = (sueldoBase + (venta1 + venta2 + venta3));
-        Console.Write($"El sueldo total es de {SueldoTotal} ");
+
+        double ComisionesTotales = (sueldoBase + ventastotales);
+        Console.Write($"El sueldo total es de {ComisionesTotales} ");
 
 
+        if ((comision1 > comision2) && (comision1 > comision3))
+        {
+            Console.Write("la venta1 es la que genero mas comision ");
+        }
+        else if ((comision2 > comision1) && (comision2 > comision3))
+        {
+            Console.Write("La venta2 es la que genero mas comision ");
+        }
+        else if ( (comision3 > comision1) && (comision3 > comision2))
+        {
+            Console.Write("la venta3 es la que genero mas comision  ");
+        }
 
     }
 }
