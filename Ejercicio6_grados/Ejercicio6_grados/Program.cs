@@ -10,6 +10,6 @@
         fahrenheit = double.Parse(Console.ReadLine());
 
         Celsius = (fahrenheit - 32) / 1.8;
-        Console.WriteLine($"La temperatura en grados celsius es {Celsius}");
+        Console.WriteLine($"La temperatura en grados Celsius es {Celsius}");
     }
 }
