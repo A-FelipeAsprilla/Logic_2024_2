@@ -16,21 +16,39 @@
         La aplicación debe preguntar al usuario si quiere volver al inicio o no para calcular la matrícula de un nuevo estudiante.
         Hacer uso de todos los elementos de programación que hemos visto hasta el momento, incluyendo POO (clases, propiedades, métodos)*/
 
-        int valorCredito, estrato;
-        int creditos = 0;
+        int estrato, creditos, valorCredito;
+        bool continuar = true;
 
-        Console.WriteLine("Ingrese el numero de creditos: ");
+        double valorTotal;
+
+        Console.WriteLine("\nBienvenidos");
+        Console.WriteLine("Si toma por encima de 20 créditos, se pagarán los créditos extras al doble de valor normal");
+
+        Console.WriteLine("Ingrese el numero de creditos");
         creditos = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ingrese el Valor del credito");
+        valorCredito = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Ingrese el estrato del estudiante");
+        estrato = Convert.ToInt32(Console.ReadLine());
 
         switch (creditos)
         {
             case int cred when cred <= 20:
-                Console.WriteLine("El valor de los creditos el normal");
+                Console.WriteLine("Pagaras los creditos al precio normal");
                 break;
 
             case int cred when cred > 20:
-                Console.WriteLine("El valor de los creditos extra es el doble del normal");
+                Console.WriteLine("Pagaras los creditos extra al doble del normal");
                 break;
+        }
+
+        if (creditos <= 20)
+        {
+            valorTotal = creditos * valorCredito;
+        }
+        else
+        {
+            valorTotal = (valorCredito * 2) * creditos;
         }
 
 
