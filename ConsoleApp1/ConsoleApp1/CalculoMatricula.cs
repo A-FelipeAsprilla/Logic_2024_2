@@ -6,13 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    internal class ValorMatricula
+    internal class CalculoMatricula
     {
         public int creditos {  get; set; }
         public int valorCredito { get; set; }
+        public int estrato { get; set; }
 
 
-        public void RangoCreditos()
+        public void CalcularMatricula()
         {
             switch (creditos)
             {
@@ -24,20 +25,34 @@ namespace ConsoleApp1
                     Console.WriteLine("Pagaras los creditos extra al doble del normal");
                     break;
             }
-        }
 
-        public void Pagaras()
-        {
-            int valorTotal = 0;
-
+            double valorCreditos = 0;
             if (creditos <= 20)
             {
-                valorTotal = creditos * valorCredito;
+                valorCreditos = creditos * valorCredito;
             }
             else
             {
-                valorTotal = (valorCredito * 2) * creditos;
+                valorCreditos = (valorCredito * 2) * creditos;
             }
+
+            double Descuento = 0;
+            switch (estrato)
+            {
+                case 1:
+                    Descuento = valorCreditos * 0.8;
+                    break;
+
+                case 2:
+                    Descuento = valorCreditos * 0.5;
+                    break;
+
+                case 3:
+                    Descuento = valorCreditos * 0.3;
+                    break;
+            }
+
+            double valorTotal = valorCreditos - Descuento;
         }
     }
 }
