@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using ConsoleApp1;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -18,39 +20,37 @@
 
         int estrato, creditos, valorCredito;
         bool continuar = true;
+        string salir;
 
-        double valorTotal;
-
-        Console.WriteLine("\nBienvenidos");
-        Console.WriteLine("Si toma por encima de 20 créditos, se pagarán los créditos extras al doble de valor normal");
-
-        Console.WriteLine("Ingrese el numero de creditos");
-        creditos = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Ingrese el Valor del credito");
-        valorCredito = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Ingrese el estrato del estudiante");
-        estrato = Convert.ToInt32(Console.ReadLine());
-
-        switch (creditos)
+        do
         {
-            case int cred when cred <= 20:
-                Console.WriteLine("Pagaras los creditos al precio normal");
-                break;
+            Console.Clear();
+            Console.WriteLine("Bienvenidos");
+            Console.WriteLine("\nSi toma por encima de 20 créditos, se pagarán los créditos extras al doble de valor normal");
 
-            case int cred when cred > 20:
-                Console.WriteLine("Pagaras los creditos extra al doble del normal");
-                break;
+            Console.Write("\nIngrese el numero de creditos: ");
+            creditos = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nIngrese el Valor del credito: ");
+            valorCredito = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nIngrese el estrato del estudiante: ");
+            estrato = Convert.ToInt32(Console.ReadLine());
+
+            CalculoMatricula calculoMatricula = new CalculoMatricula();
+            calculoMatricula.creditos = creditos;
+            calculoMatricula.valorCredito = valorCredito;
+            calculoMatricula.estrato = estrato;
+
+            calculoMatricula.CalcularMatricula();
+            calculoMatricula.CalcularSubsidio();
+
+            Console.WriteLine("\n¿Desea realizar otra Matricula? (S/N)");
+            salir = Console.ReadLine().ToUpper();
+            if (salir == "N")
+            {
+                Console.WriteLine("\nTe has salido del programa! Adios");
+                continuar = false;
+            }
         }
-
-        if (creditos <= 20)
-        {
-            valorTotal = creditos * valorCredito;
-        }
-        else
-        {
-            valorTotal = (valorCredito * 2) * creditos;
-        }
-
-
+        while (continuar);
     }
 }

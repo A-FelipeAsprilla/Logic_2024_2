@@ -18,23 +18,27 @@ namespace ConsoleApp1
             switch (creditos)
             {
                 case int cred when cred <= 20:
-                    Console.WriteLine("Pagaras los creditos al precio normal");
+                    Console.WriteLine("\nPagaras los creditos al precio normal");
                     break;
 
                 case int cred when cred > 20:
-                    Console.WriteLine("Pagaras los creditos extra al doble del normal");
+                    Console.WriteLine("\nPagaras los creditos extra al doble del normal");
                     break;
             }
+
 
             double valorCreditos = 0;
             if (creditos <= 20)
             {
                 valorCreditos = creditos * valorCredito;
+                Console.WriteLine($"El valor de los creditos es {valorCreditos} ");
             }
             else
             {
                 valorCreditos = (valorCredito * 2) * creditos;
+                Console.WriteLine($"El valor de los creditos es {valorCreditos} ");
             }
+
 
             double Descuento = 0;
             switch (estrato)
@@ -53,6 +57,24 @@ namespace ConsoleApp1
             }
 
             double valorTotal = valorCreditos - Descuento;
+            Console.WriteLine($"El valor de la matricula es de {valorTotal} ");
+        }
+
+        public void CalcularSubsidio()
+        {
+            double subsidio = 0;
+            switch (estrato)
+            {
+                case 1:
+                    subsidio = 200000;
+                    Console.WriteLine($"El subsidio de transportes y alimentacion es de {subsidio} ");
+                    break;
+
+                case 2:
+                    subsidio = 100000;
+                    Console.WriteLine($"El subsidio de transportes y alimentacion es de {subsidio} ");
+                    break;
+            }
         }
     }
 }
