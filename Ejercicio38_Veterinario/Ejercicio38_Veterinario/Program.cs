@@ -23,31 +23,40 @@
             Console.WriteLine("---3. Regalar                    ---");
             Console.WriteLine("---0. Salir                      ---");
             Console.WriteLine("------------------------------------");
-            opcion  = int.Parse(Console.ReadLine());
+            opcion = int.Parse(Console.ReadLine());
 
             switch (opcion)
             {
                 case 0:
-                    Console.WriteLine("Te has salido del programa adios");
+                    Console.WriteLine("\nTe has salido del programa adios");
                     continuar = false;
                     break;
 
                 case 1:
-                    Console.WriteLine("La opcion seleccionada es Comprar");
+                    Console.WriteLine("\nLa opcion seleccionada es Comprar");
                     break;
 
                 case 2:
-                    Console.WriteLine("La opcion seleccionada es Adoptar");
+                    Console.WriteLine("\nLa opcion seleccionada es Adoptar");
                     break;
 
                 case 3:
-                    Console.WriteLine("La opcion seleccionada es Regalar");
+                    Console.WriteLine("\nLa opcion seleccionada es Regalar");
                     break;
 
                 default:
-                    Console.WriteLine("La opcion seleccionada es invalida");
+                    Console.WriteLine("\nLa opcion seleccionada es invalida");
                     break;
             }
+
+            Console.WriteLine("\n¿Desea realizar otra Matricula? (S/N)");
+            salir = Console.ReadLine().ToUpper();
+            if (salir == "N")
+            {
+                Console.WriteLine("\nTe has salido del programa! Adios");
+                continuar = false;
+            }
+        }
         while (continuar);
     }
 }
