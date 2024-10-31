@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using Ejercicio38_Veterinario;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -34,6 +36,10 @@
 
                 case 1:
                     Console.WriteLine("\nLa opcion seleccionada es Comprar");
+                    Comprar comprar = new Comprar();
+                    comprar.raza = 0;
+                    comprar.Razas();
+
                     break;
 
                 case 2:
@@ -49,7 +55,7 @@
                     break;
             }
 
-            Console.WriteLine("\n¿Desea realizar otra Matricula? (S/N)");
+            Console.WriteLine("\n¿Desea realizar otra Operacion? (S/N)");
             salir = Console.ReadLine().ToUpper();
             if (salir == "N")
             {
