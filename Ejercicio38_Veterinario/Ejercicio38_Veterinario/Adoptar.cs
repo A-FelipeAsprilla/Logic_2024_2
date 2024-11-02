@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Ejercicio38_Veterinario
 {
-    internal class Adoptar
+    internal class Adoptar:Comprar
     {
+
     }
 }

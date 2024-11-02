@@ -13,14 +13,14 @@ namespace Ejercicio38_Veterinario
         {
             int precio = 0;
             int opcion;
-            Console.WriteLine("\n------------------------------------------");
-            Console.WriteLine("---Seleccione la raza que desea comprar---");
-            Console.WriteLine("---1. Perro                            ---");
-            Console.WriteLine("---2. Gato                             ---");
-            Console.WriteLine("---3. Tortuga                          ---");
-            Console.WriteLine("---4. Conejo                           ---");
-            Console.WriteLine("---5. Loro                             ---");
-            Console.WriteLine("------------------------------------------");
+            Console.WriteLine("\n-------------------------------------------");
+            Console.WriteLine("---Seleccione la raza que desea adquirir---");
+            Console.WriteLine("---1. Perro                             ---");
+            Console.WriteLine("---2. Gato                              ---");
+            Console.WriteLine("---3. Tortuga                           ---");
+            Console.WriteLine("---4. Conejo                            ---");
+            Console.WriteLine("---5. Loro                              ---");
+            Console.WriteLine("-------------------------------------------");
             opcion = Convert.ToInt32(Console.ReadLine());
 
             switch (opcion)
@@ -50,7 +50,6 @@ namespace Ejercicio38_Veterinario
                     Console.WriteLine($"\nLa raza comprada es el Loro y su valor es {precio}");
                     break;
             }
-
         }
     }
 }
