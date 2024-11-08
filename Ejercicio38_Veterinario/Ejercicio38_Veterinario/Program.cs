@@ -37,13 +37,14 @@ internal class Program
                 case 1:
                     Console.WriteLine("\nLa opcion seleccionada es Comprar");
                     Comprar comprar = new Comprar();
-                    comprar.raza = 0;
                     comprar.Razas();
 
                     break;
 
                 case 2:
                     Console.WriteLine("\nLa opcion seleccionada es Adoptar");
+                    Adoptar adoptar = new Adoptar();
+                    adoptar.Razas();
                     break;
 
                 case 3:
