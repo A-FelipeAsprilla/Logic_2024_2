@@ -49,6 +49,11 @@ internal class Program
 
                 case 3:
                     Console.WriteLine("\nLa opcion seleccionada es Regalar");
+                    Regalar regalar = new Regalar();
+                    regalar.Nombre();
+                    regalar.edad();
+                    regalar.Razas();
+                    regalar.Peso();
                     break;
 
                 default:

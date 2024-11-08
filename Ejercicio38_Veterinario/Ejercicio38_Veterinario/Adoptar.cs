@@ -26,29 +26,25 @@ namespace Ejercicio38_Veterinario
             {
                 case 1:
                     Console.WriteLine($"\nLa raza Adoptada es el Perro");
-                    Console.WriteLine("\nGracias por Adoptar esta mascota");
                     break;
 
                 case 2:
                     Console.WriteLine($"\nLa raza Adoptada es el Gato");
-                    Console.WriteLine("\nGracias por Adoptar esta mascota");
                     break;
 
                 case 3:
-                    Console.WriteLine($"\nLa raza Adoptada es el Tortuga");
-                    Console.WriteLine("\nGracias por Adoptar esta mascota");
+                    Console.WriteLine($"\nLa raza Adoptada es la Tortuga");
                     break;
 
                 case 4:
                     Console.WriteLine($"\nLa raza Adoptada es el Conejo");
-                    Console.WriteLine("\nGracias por Adoptar esta mascota");
                     break;
 
                 case 5:
                     Console.WriteLine($"\nLa raza Adoptada es el Loro");
-                    Console.WriteLine("\nGracias por Adoptar esta mascota");
                     break;
             }
+            Console.WriteLine("\nGracias por Adoptar esta mascota");
         }
     }
 }
