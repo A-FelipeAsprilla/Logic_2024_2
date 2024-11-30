@@ -9,6 +9,7 @@ internal class Program
     static int[,] board = new int[N, M];
     static int posX = 0, posY = 0;
     static bool escKeyPressed = false;
+    static int suma = 0;
     private static void Main(string[] args)
     {
         FillBoard();
@@ -55,20 +56,31 @@ internal class Program
         switch (diretion)
         {
             case "derecha":
-                if (posY < N-1) posY++;
+                if (posY < N - 1)
+                {
+                    posY++;
+                }
                 break;
             case "izquierda":
-                if (posY > M+1) posY--;
+                if (posY > 0)
+                {
+                    posY--;
+                }
                 break;
             case "arriba":
-                if (posX > M+1) posX--;
+                if (posX > 0)
+                {
+                    posX--;
+                }
                 break;
             case "abajo":
-                if (posX < N-1) posX++;
+                if (posX < N - 1)
+                {
+                    posX++;
+                }
                 break;
         }
     }
-
     private static void ShowBoard()
     {
         Console.Clear();
@@ -100,6 +112,8 @@ internal class Program
                 board[i, j] = random.Next(1, 10);
             }
         }
-        board[posX, posY] = 0;
+        board[0, 0] = 0;
     }
+
+
 }
